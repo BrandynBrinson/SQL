@@ -1,0 +1,14 @@
+-- What is the average popularity of each artist
+
+Select artist_name, popularity
+from BIT_DB.Spotifydata
+Group by artist_name
+Order by popularity desc;
+
+
+-- what are the loudest artists
+
+Select artist_name, AVG (loudness)
+from BIT_DB.Spotifydata
+Group by artist_name
+order by AVG(loudness);
